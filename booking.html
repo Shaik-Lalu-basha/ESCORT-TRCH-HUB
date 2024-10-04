@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ESCORT TECH HUB</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Technology, Events, Workshops" name="keywords">
+    <meta content="ESCORT TECH HUB is your go-to platform for technical events, hackathons, ideathons, webinars, and internships." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #e0eafc, #cfdef3);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        
+        h1,
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .section:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        
+        .section h2 {
+            color: #ff7e5f;
+            font-size: 24px;
+        }
+        
+        .events-section {
+            background: linear-gradient(45deg, #74ebd5, #9face6);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .events-section h2 {
+            margin-top: 0;
+        }
+        
+        .events-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .events-list li {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .events-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .one-voice-board {
+            background: #4a90e2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            animation: slideIn 1s ease-in-out;
+        }
+        
+        .one-voice-board h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .one-voice-board p {
+            font-size: 18px;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Kurnool, Andhra Pradesh, India</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+7993417685</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>escorttechhub@gmail.com</small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/escort_tech_hub_official?igsh=bnhjMWpsZjB0Nzdv"><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square" href="https://chat.whatsapp.com/LmmNmXG4MTaINl5cS9jr7W"><i class="fab fa-whatsapp fw-normal"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="booking.html" class="navbar-brand p-0 d-flex align-items-center">
+                <img src="img/logo1.png" alt="ESCORT TECH HUB Logo" class="me-3" style="height: 40px;">
+                <h1 class="text-primary m-0">ESCORT TECH HUB</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link">Services</a>
+                    <a href="events.html" class="nav-item nav-link">Events</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Blogs</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="destination.html" class="dropdown-item">Hackathos</a>
+                            <a href="booking.html" class="dropdown-item">Ideathos</a>
+                            <!-- <a href="team.html" class="dropdown-item">Internships</a>-->
+                            <a href="testimonial.html" class="dropdown-item">Webinars</a>
+                            <a href="404.html" class="dropdown-item">Others</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <!-- Register/Login Dropdown -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="btn btn-primary rounded-pill py-2 px-4 dropdown-toggle" id="registerDropdown" data-bs-toggle="dropdown">
+                Register/Login
+            </a>
+                    <ul class="dropdown-menu" aria-labelledby="registerDropdown">
+                        <li><a class="dropdown-item" href="admin-login.html">Admin Login/Register</a></li>
+                        <li><a class="dropdown-item" href="student-login.html">Student Login/Register</a></li>
+                        <li><a class="dropdown-item" href="organization-login.html">Organization Login/Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+            <div class="container py-5">
+                <div class="row justify-content-center py-5">
+                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                        <h1 class="display-3 text-white animated slideInDown">Ideathons</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="events.html">Events</a></li>
+                                <li class="breadcrumb-item text-white active" aria-current="page">Ideathons</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+    <h1>Welcome to the Ideathon Page</h1>
+
+    <div class="section">
+        <h2>What is an Ideathon?</h2>
+        <p>An ideathon is a brainstorming event where participants collaborate to generate innovative ideas and solutions to specific challenges within a limited time frame. Unlike a hackathon, which focuses on developing working prototypes, an ideathon
+            emphasizes idea generation and concept development.</p>
+    </div>
+
+    <div class="section">
+        <h2>How Can You Participate and Learn?</h2>
+        <p>Participants can sign up individually or in teams, collaborate on guided themes, and work together to brainstorm and refine ideas. Expert mentors guide participants, and teams present their ideas to judges for evaluation.</p>
+    </div>
+
+    <div class="section">
+        <h2>Importance of Ideathons</h2>
+        <p>Ideathons drive innovation, build communities, and serve as early-stage concept development platforms. They also encourage entrepreneurial spirit, with many ideas serving as foundations for startups or research projects.</p>
+    </div>
+
+    <div class="section events-section">
+        <h2>Events</h2>
+        <ul class="events-list">
+            <li><strong>Ideathon 2k24:</strong> A 24-hour ideathon focused on sustainable technology solutions.</li>
+            <li><strong>Tech Innovators Challenge:</strong> A themed ideathon around developing innovative healthcare solutions.</li>
+            <li><strong>Future of AI:</strong> An ideathon dedicated to exploring applications of AI in everyday life.</li>
+        </ul>
+    </div>
+
+    <div class="one-voice-board">
+        <h2>One Voice Board</h2>
+        <p>The One Voice Board serves as a centralized platform where all events are listed and represented. Get real-time updates, feedback, and engage in discussions post-event.</p>
+    </div>
+
+    <!-- Process Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">How It Works</h6>
+                <h1 class="mb-5">Our Simple 3-Step Process</h1>
+            </div>
+            <div class="row gy-5 gx-4 justify-content-center">
+                <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="position-relative border border-primary pt-5 pb-4 px-4">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+                            <i class="fa fa-calendar-alt fa-3x text-white"></i>
+                        </div>
+                        <h5 class="mt-4">Register for the Event</h5>
+                        <hr class="w-25 mx-auto bg-primary mb-1">
+                        <hr class="w-50 mx-auto bg-primary mt-0">
+                        <p class="mb-0">Choose the event you want to participate in and complete your registration in just a few clicks.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="position-relative border border-primary pt-5 pb-4 px-4">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+                            <i class="fa fa-users fa-3x text-white"></i>
+                        </div>
+                        <h5 class="mt-4">Participate & Network</h5>
+                        <hr class="w-25 mx-auto bg-primary mb-1">
+                        <hr class="w-50 mx-auto bg-primary mt-0">
+                        <p class="mb-0">Collaborate with like-minded individuals, share ideas, and build solutions in real-time during the event.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="position-relative border border-primary pt-5 pb-4 px-4">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+                            <i class="fa fa-trophy fa-3x text-white"></i>
+                        </div>
+                        <h5 class="mt-4">Achieve & Win</h5>
+                        <hr class="w-25 mx-auto bg-primary mb-1">
+                        <hr class="w-50 mx-auto bg-primary mt-0">
+                        <p class="mb-0">Win exciting prizes, gain recognition, and take your ideas to the next level.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Process End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn " data-wow-delay="0.1s ">
+        <div class="container py-5 ">
+            <div class="row g-5 ">
+                <div class="col-lg-3 col-md-6 ">
+                    <h4 class="text-white mb-3 ">Company</h4>
+                    <a class="btn btn-link " href="about.html ">About Us</a>
+                    <a class="btn btn-link " href="contact.html ">Contact Us</a>
+                    <a class="btn btn-link " href=" ">Privacy Policy</a>
+                    <a class="btn btn-link " href=" ">Terms & Conditions</a>
+                    <a class="btn btn-link " href=" ">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6 ">
+                    <h4 class="text-white mb-3 ">Contact</h4>
+                    <p class="mb-2 "><i class="fa fa-map-marker-alt me-3 "></i>2-204, Palakollanu, Kurnool, India</p>
+                    <p class="mb-2 "><i class="fa fa-phone-alt me-3 "></i>+91 7993417685</p>
+                    <p class="mb-2 "><i class="fa fa-envelope me-3 "></i>support@escorttechhub.com</p>
+                    <div class="d-flex pt-2 ">
+                        <a class="btn btn-outline-light btn-social " href=" "><i class="fab fa-twitter "></i></a>
+                        <a class="btn btn-outline-light btn-social " href="https://www.instagram.com/escort_tech_hub_official?igsh=bnhjMWpsZjB0Nzdv "><i class="fab fa-instagram fw-normal "></i></a>
+                        <a class="btn btn-outline-light btn-social " href=" "><i class="fab fa-youtube "></i></a>
+                        <a class="btn btn-outline-light btn-social " href=" "><i class="fab fa-linkedin-in "></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href="https://chat.whatsapp.com/LmmNmXG4MTaINl5cS9jr7W"><i class="fab fa-whatsapp fw-normal"></i></a>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 ">
+                    <h4 class="text-white mb-3 ">Our Services</h4>
+                    <div class="row g-2 pt-2 ">
+                        <div class="col-12 ">
+                            <a class="btn btn-link " href="testimonial.html">Workshops  </a>
+                        </div>
+                        <div class="col-12 ">
+                            <a class="btn btn-link " href="team.html"> Webinars </a>
+                        </div>
+                        <div class="col-12 ">
+                            <a class="btn btn-link " href="destination.html">Hackathons</a>
+                        </div>
+                        <div class="col-12 "></div>
+                        <a class="btn btn-link " href="booking.html">Ideathons</a>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 ">
+                    <h4 class="text-white mb-3 ">Newsletter</h4>
+                    <p style="color: #f5f7fa;">Stay updated with our latest events and workshops!</p>
+                    <div class="position-relative mx-auto " style="max-width: 400px; ">
+                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5 " type="text " placeholder="Your email ">
+                        <button type="button " class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2 ">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container ">
+            <div class="copyright ">
+                <div class="row ">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 ">
+                        &copy; <a class="border-bottom " href="# ">ESCORT TECH HUB</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end ">
+                        <div class="footer-menu ">
+                            <a href="index.html ">Home</a>
+                            <a href=" ">Cookies</a>
+                            <a href="contact.html ">Help</a>
+                            <a href=" ">FAQs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

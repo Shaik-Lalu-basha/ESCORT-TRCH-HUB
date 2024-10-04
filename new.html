@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your ESCORT TECH HUB Account</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #2C3E50;
+        }
+        /* Animated Background */
+        
+        .animated-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #3498db, #8e44ad, #2ecc71, #e74c3c);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            z-index: -1;
+        }
+        
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        /* Form Container */
+        
+        .form-container {
+            display: flex;
+            background-color: #ffffff;
+            padding: 30px;
+            width: 800px;
+            max-height: 70vh;
+            overflow-y: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease;
+            position: relative;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+        /* Image Section */
+        
+        .image-section {
+            flex: 1;
+            background-image: url('img/student.jpg');
+            /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px 0 0 10px;
+        }
+        /* Form Content Section */
+        
+        .form-content {
+            flex: 1;
+            padding: 20px;
+        }
+        /* Heading and Sign-in */
+        
+        .form-content h2 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #2C3E50;
+            font-weight: 700;
+        }
+        
+        .form-content .sign-in {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #7F8C8D;
+        }
+        
+        .form-content .sign-in a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /* Form Rows */
+        
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .form-row label {
+            width: 30%;
+            font-weight: bold;
+            color: #2C3E50;
+            font-size: 14px;
+        }
+        
+        .form-row input,
+        .form-row select {
+            width: 65%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #2C3E50;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-row input:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        
+        .helper-text {
+            font-size: 12px;
+            color: #7F8C8D;
+            margin-top: 5px;
+        }
+        /* Button */
+        
+        .btn-create,
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        .btn-create:hover,
+        .btn-login:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        /* Form Footer */
+        
+        .form-footer {
+            font-size: 12px;
+            color: #7F8C8D;
+            margin-top: 20px;
+            line-height: 1.5;
+            text-align: center;
+        }
+        
+        .form-footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+        /* Hidden Fields */
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animated-background"></div>
+    <div class="form-container">
+        <div class="image-section"></div>
+        <div class="form-content">
+            <h2 id="form-title">Create Your ESCORT TECH HUB Account</h2>
+            <p class="sign-in">Already have an ESCORT TECH HUB Account? <a href="#" onclick="toggleForms()">Sign In</a></p>
+            <form onsubmit="return validateForm()">
+                <div id="signup-fields">
+                    <div class="form-row">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="password">Password *</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="retype-password">Retype password *</label>
+                        <input type="password" id="retype-password" required>
+                    </div>
+                </div>
+                <div id="login-fields" class="hidden">
+                    <div class="form-row">
+                        <label for="login-email">Email Address *</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="login-password">Password *</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-create" id="submit-button">Create Account</button>
+                <p class="form-footer">By clicking on the "Create Account" button below, you agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleForms() {
+            const signupFields = document.getElementById('signup-fields');
+            const loginFields = document.getElementById('login-fields');
+            const formTitle = document.getElementById('form-title');
+            const submitButton = document.getElementById('submit-button');
+
+            if (signupFields.classList.contains('hidden')) {
+                signupFields.classList.remove('hidden');
+                loginFields.classList.add('hidden');
+                formTitle.innerText = 'Create Your ESCORT TECH HUB Account';
+                submitButton.innerText = 'Create Account';
+            } else {
+                signupFields.classList.add('hidden');
+                loginFields.classList.remove('hidden');
+                formTitle.innerText = 'Sign In to ESCORT TECH HUB';
+                submitButton.innerText = 'Sign In';
+            }
+        }
+
+        function validateForm() {
+            const isSigningUp = !document.getElementById('signup-fields').classList.contains('hidden');
+
+            if (isSigningUp) {
+                const password = document.getElementById('password').value;
+                const retypePassword = document.getElementById('retype-password').value;
+
+                if (password !== retypePassword) {
+                    alert('Passwords do not match!');
+                    return false;
+                }
+            } else {
+                // Add login validation if needed
+            }
+
+            // Add more validation as needed
+            return true;
+        }
+    </script>
+</body>
+
+</html>

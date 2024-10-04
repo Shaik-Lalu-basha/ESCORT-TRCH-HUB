@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .profile-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        
+        h2 {
+            margin-bottom: 15px;
+        }
+        
+        p {
+            margin: 8px 0;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile-container">
+        <h2 id="profile-name">Loading...</h2>
+        <p><strong>Email:</strong> <span id="profile-email"></span></p>
+        <p><strong>Phone:</strong> <span id="profile-phone"></span></p>
+        <p><strong>Bio:</strong> <span id="profile-bio"></span></p>
+    </div>
+
+    <script>
+        // JavaScript to fetch and display profile data
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fetch data from the PHP script
+            fetch('fetch_profile.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message) {
+                        // Handle error (if user not found)
+                        document.getElementById('profile-name').textContent = data.message;
+                    } else {
+                        // Update UI with user profile details
+                        document.getElementById('profile-name').textContent = data.name;
+                        document.getElementById('profile-email').textContent = data.email;
+                        document.getElementById('profile-phone').textContent = data.phone;
+                        document.getElementById('profile-bio').textContent = data.bio;
+                    }
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+    </script>
+</body>
+
+</html>
