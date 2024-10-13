@@ -193,6 +193,8 @@
 </head>
 
 <body>
+
+
     <div class="animated-background"></div>
     <div class="form-container">
         <div class="image-section"></div>
@@ -200,6 +202,7 @@
             <h2 id="form-title">Create Your ESCORT TECH HUB Account</h2>
             <p class="sign-in">Already have an ESCORT TECH HUB Account? <a href="#" onclick="toggleForms()">Sign In</a></p>
             <form onsubmit="return validateForm()">
+                <!-- Signup Fields -->
                 <div id="signup-fields">
                     <div class="form-row">
                         <label for="email">Email Address *</label>
@@ -207,13 +210,15 @@
                     </div>
                     <div class="form-row">
                         <label for="password">Password *</label>
-                        <input type="password" id="password" required>
+                        <input type="password" id="password" minlength="8" required>
                     </div>
                     <div class="form-row">
-                        <label for="retype-password">Retype password *</label>
+                        <label for="retype-password">Retype Password *</label>
                         <input type="password" id="retype-password" required>
                     </div>
                 </div>
+
+                <!-- Login Fields (Initially Hidden) -->
                 <div id="login-fields" class="hidden">
                     <div class="form-row">
                         <label for="login-email">Email Address *</label>
@@ -224,6 +229,7 @@
                         <input type="password" id="login-password" required>
                     </div>
                 </div>
+
                 <button type="submit" class="btn-create" id="submit-button">Create Account</button>
                 <p class="form-footer">By clicking on the "Create Account" button below, you agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
             </form>
@@ -261,14 +267,24 @@
                     alert('Passwords do not match!');
                     return false;
                 }
+
+                if (!validatePasswordStrength(password)) {
+                    alert('Password must be at least 8 characters long, contain an uppercase letter, a number, and a special character.');
+                    return false;
+                }
             } else {
                 // Add login validation if needed
             }
 
-            // Add more validation as needed
             return true;
         }
+
+        function validatePasswordStrength(password) {
+            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/;
+            return passwordPattern.test(password);
+        }
     </script>
+
 </body>
 
 </html>

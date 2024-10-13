@@ -201,9 +201,9 @@
                     Register/Login
                 </a>
                     <ul class="dropdown-menu" aria-labelledby="registerDropdown">
-                        <li><a class="dropdown-item" href="admin-login.html">Admin Login/Register</a></li>
+                        <li><a class="dropdown-item" href="admin-login.html">Admin Login</a></li>
+                        <li><a class="dropdown-item" href="organization-login.html">Organization Login</a></li>
                         <li><a class="dropdown-item" href="student-login.html">Student Login/Register</a></li>
-                        <li><a class="dropdown-item" href="organization-login.html">Organization Login/Register</a></li>
                     </ul>
                 </div>
             </div>
@@ -1186,23 +1186,19 @@
                 font-family: 'Poppins', sans-serif;
                 margin: 0;
                 padding: 0;
-                background: url('your-universe-background-image-url.jpg') no-repeat center center fixed;
-                /* Add your universe background image */
                 background-size: cover;
             }
             
             .milestones-section {
                 text-align: center;
                 padding: 80px 20px;
-                background: rgba(62, 80, 180, 0.8);
-                /* Semi-transparent gradient background */
-                color: white;
+                background: url('img/milestone.jpg') no-repeat center center/cover;
+                /* Add background image */
+                color: black;
                 position: relative;
                 overflow: hidden;
                 border-radius: 15px;
-                /* Rounded corners */
                 box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
-                /* Enhanced shadow for depth */
             }
             
             h1 {
@@ -1221,8 +1217,10 @@
             .milestone-item {
                 margin: 20px;
                 max-width: 250px;
-                background: rgba(255, 255, 255, 0.2);
-                /* More opaque background */
+                background: transparent;
+                /* Make the background fully transparent */
+                border: 2px solid rgba(0, 0, 0, 0.9);
+                /* Dark black border */
                 border-radius: 15px;
                 padding: 30px;
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -1239,11 +1237,9 @@
                 font-weight: bold;
                 margin-bottom: 10px;
                 transition: color 0.3s ease-in-out;
-                background: linear-gradient(135deg, #ff6b6b, #f9d56e);
-                /* Gradient text */
+                background: linear-gradient(135deg, #6b0404, #f9d56e);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                /* Make text transparent to show gradient */
             }
             
             p {
@@ -1293,39 +1289,33 @@
             }
         </style>
 
-
-        <!-- Notification 
-        <div class="notification">
-            <strong>NEW NOTIFICATION:</strong> The finalists for the NCIIIPC SIH 2024 Problem Statements will be eligible to apply for our paid internship program after due assessment and vetting.
-        </div>-->
-
         <!-- Milestones Section -->
         <section class="milestones-section">
             <h1>ESCORT TECH HUB Milestones</h1>
             <div class="milestones-container">
                 <div class="milestone-item">
                     <div class="milestone-count" data-count="400">0</div>
-                    <p>WhatsApp Group Members</p>
+                    <p style="color: black;">WhatsApp Group Members</p>
                 </div>
                 <div class="milestone-item">
                     <div class="milestone-count" data-count="250">0</div>
-                    <p>Hackathon Participants</p>
+                    <p style="color: black;">Hackathon Participants</p>
                 </div>
                 <div class="milestone-item">
                     <div class="milestone-count" data-count="297">0</div>
-                    <p>Ideathon Participants</p>
+                    <p style="color: black;">Ideathon Participants</p>
                 </div>
                 <div class="milestone-item">
                     <div class="milestone-count" data-count="2">0</div>
-                    <p>Events Conducted</p>
+                    <p style="color: black;">Events Conducted</p>
                 </div>
                 <div class="milestone-item">
                     <div class="milestone-count" data-count="700">0</div>
-                    <p>Participating Students</p>
+                    <p style="color: black;">Participating Students</p>
                 </div>
                 <div class="milestone-item">
                     <div class="milestone-count" data-count="3">0</div>
-                    <p>Registered Workshops</p>
+                    <p style="color: black;">Registered Workshops</p>
                 </div>
             </div>
         </section>
@@ -1337,7 +1327,7 @@
                 milestoneCounts.forEach(count => {
                     const target = +count.getAttribute('data-count');
                     let current = 0;
-                    const increment = Math.ceil(target / 100); // Increment value based on target
+                    const increment = Math.ceil(target / 200); // Slower increment for smoother animation
 
                     const updateCount = setInterval(() => {
                         current += increment;
@@ -1346,7 +1336,7 @@
                         if (current >= target) {
                             clearInterval(updateCount);
                         }
-                    }, 30); // Adjust speed by changing the interval time
+                    }, 50); // Increase the interval time to slow down the count speed
                 });
             });
         </script>

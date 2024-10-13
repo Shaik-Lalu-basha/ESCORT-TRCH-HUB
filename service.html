@@ -100,9 +100,9 @@
                     Register/Login
                 </a>
                     <ul class="dropdown-menu" aria-labelledby="registerDropdown">
-                        <li><a class="dropdown-item" href="admin-login.html">Admin Login/Register</a></li>
+                        <li><a class="dropdown-item" href="admin-login.html">Admin Login</a></li>
+                        <li><a class="dropdown-item" href="organization-login.html">Organization Login</a></li>
                         <li><a class="dropdown-item" href="student-login.html">Student Login/Register</a></li>
-                        <li><a class="dropdown-item" href="organization-login.html">Organization Login/Register</a></li>
                     </ul>
                 </div>
             </div>
@@ -1068,163 +1068,165 @@
         link.click();
     }
 </script>
+<style>
+    body {
+        background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
+        overflow-x: hidden;
+    }
+    
+    .events-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .event-card {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        margin: 15px 0;
+        padding: 20px;
+        width: 80%;
+        position: relative;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease;
+    }
+    
+    .event-card:hover {
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+    }
+    
+    .event-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .event-header h2 {
+        color: #333;
+        margin-bottom: 0;
+    }
+    
+    .collapse-content {
+        margin-top: 10px;
+    }
+    
+    .register-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #FF5722;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .register-button:hover {
+        background-color: #E64A19;
+        transform: scale(1.05);
+    }
+    
+    .event-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: rgba(255, 87, 34, 0.1);
+        z-index: 0;
+        transform: scale(1.5);
+        transition: transform 0.5s ease;
+    }
+    
+    .event-card:hover::before {
+        transform: scale(1);
+    }
+</style>
 
-<body>
-    <h1 style="text-align: center; color: #FF5722; font-size: 3em; margin-bottom: 20px;">Upcoming Coding Competitions</h1>
+<h1 style="text-align: center; color: #FF5722; font-size: 3em; margin-bottom: 20px;">Upcoming Coding Competitions</h1>
 
-    <div class="events-container">
-        <div class="event">
+<div class="events-container">
+    <!-- Event 1 -->
+    <div class="event-card">
+        <div class="event-header" data-toggle="collapse" data-target="#event1">
             <h2>Hackathon by ESCORT TECH HUB</h2>
+            <span class="fas fa-chevron-down"></span>
+        </div>
+        <div id="event1" class="collapse collapse-content">
             <p><strong>Date:</strong> November 15, 2024</p>
             <p><strong>Location:</strong> Santhiram Engineering College</p>
             <p><strong>Description:</strong> A 24-hour hackathon to solve real-world problems using innovative technology.</p>
             <a href="#" class="register-button">Register Now</a>
         </div>
+    </div>
 
-        <div class="event">
+    <!-- Event 2 -->
+    <div class="event-card">
+        <div class="event-header" data-toggle="collapse" data-target="#event2">
             <h2>CodeJam by XYZ Organization</h2>
+            <span class="fas fa-chevron-down"></span>
+        </div>
+        <div id="event2" class="collapse collapse-content">
             <p><strong>Date:</strong> December 5, 2024</p>
             <p><strong>Location:</strong> Online</p>
             <p><strong>Description:</strong> A competitive coding event that challenges participants with algorithmic problems.</p>
             <a href="#" class="register-button">Register Now</a>
         </div>
+    </div>
 
-        <div class="event">
+    <!-- Event 3 -->
+    <div class="event-card">
+        <div class="event-header" data-toggle="collapse" data-target="#event3">
             <h2>Weekly Coding Challenge by Codeforces</h2>
+            <span class="fas fa-chevron-down"></span>
+        </div>
+        <div id="event3" class="collapse collapse-content">
             <p><strong>Date:</strong> Every Friday</p>
             <p><strong>Location:</strong> Online</p>
             <p><strong>Description:</strong> Join our weekly coding challenges on Codeforces to enhance your skills!</p>
             <a href="#" class="register-button">Join Challenge</a>
         </div>
+    </div>
 
-        <div class="event">
+    <!-- Event 4 -->
+    <div class="event-card">
+        <div class="event-header" data-toggle="collapse" data-target="#event4">
             <h2>Global Programming Contest by HackerRank</h2>
+            <span class="fas fa-chevron-down"></span>
+        </div>
+        <div id="event4" class="collapse collapse-content">
             <p><strong>Date:</strong> January 10, 2025</p>
             <p><strong>Location:</strong> Online</p>
             <p><strong>Description:</strong> Compete with programmers from around the world in this exciting event.</p>
             <a href="#" class="register-button">Join Now</a>
         </div>
+    </div>
 
-        <div class="event">
+    <!-- Event 5 -->
+    <div class="event-card">
+        <div class="event-header" data-toggle="collapse" data-target="#event5">
             <h2>LeetCode Monthly Contest</h2>
+            <span class="fas fa-chevron-down"></span>
+        </div>
+        <div id="event5" class="collapse collapse-content">
             <p><strong>Date:</strong> January 15, 2025</p>
             <p><strong>Location:</strong> Online</p>
             <p><strong>Description:</strong> Test your skills and rank against other coders in this monthly contest.</p>
             <a href="#" class="register-button">Join Now</a>
         </div>
     </div>
+</div>
 
-    <style>
-        body {
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-            /* Prevent horizontal scrolling */
-        }
-        
-        .events-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .event {
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            margin: 15px 0;
-            padding: 20px;
-            width: 80%;
-            position: relative;
-            /* For pseudo-element positioning */
-            overflow: hidden;
-            /* Hide overflowing elements */
-            animation: slideIn 0.5s ease forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        
-        .event h2 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-        
-        .event p {
-            color: #555;
-            margin: 5px 0;
-        }
-        
-        .register-button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #FF5722;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        
-        .register-button:hover {
-            background-color: #E64A19;
-            transform: scale(1.05);
-        }
-        
-        .event::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            background: rgba(255, 87, 34, 0.1);
-            /* Light overlay */
-            z-index: 0;
-            /* Behind the content */
-            transform: scale(1.5);
-            /* Initial scale for animation */
-            transition: transform 0.5s ease;
-            /* Animation on hover */
-        }
-        
-        .event:hover::before {
-            transform: scale(1);
-            /* Scale to normal on hover */
-        }
-        
-        @keyframes slideIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        /* Optional: Adjust the animation delay for each event */
-        
-        .event:nth-child(1) {
-            animation-delay: 0s;
-        }
-        
-        .event:nth-child(2) {
-            animation-delay: 0.1s;
-        }
-        
-        .event:nth-child(3) {
-            animation-delay: 0.2s;
-        }
-        
-        .event:nth-child(4) {
-            animation-delay: 0.3s;
-        }
-        
-        .event:nth-child(5) {
-            animation-delay: 0.4s;
-        }
-    </style>
-</body>
+
+
 
 <!-- Unique Services Section Start -->
-<section class="service-section py-5" style="background-color: #80a2a9; overflow: hidden;">
+<section class="service-section py-5" style="background-image: url('img/booking.jpg'); background-size: cover; background-position: center; overflow: hidden; position: relative;">
     <div class="container">
         <div class="text-center mb-5">
             <h6 class="section-title text-glow" style="color: #86B817; font-size: 20px;">What We Offer</h6>
@@ -1234,45 +1236,45 @@
         <div class="row justify-content-center g-4">
             <!-- Service Item 1 -->
             <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-item wow fadeIn" data-wow-delay="0.1s" style="position: relative; padding: 30px; transition: all 0.3s ease;">
+                <div class="service-item wow fadeIn" data-wow-delay="0.1s" style="background-color: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 15px; transition: all 0.3s ease; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); backdrop-filter: blur(10px);">
                     <div class="service-circle">
                         <i class="fa fa-rocket" style="font-size: 50px; color: #fff;"></i>
                     </div>
-                    <h5 class="mt-4 text-black">AI & Automation</h5>
-                    <p class="text-muted-black">Leverage AI to automate workflows, increase productivity, and deliver smarter solutions.</p>
+                    <h5 class="mt-4 text-white">AI & Automation</h5>
+                    <p class="text-white">Leverage AI to automate workflows, increase productivity, and deliver smarter solutions.</p>
                 </div>
             </div>
 
             <!-- Service Item 2 -->
             <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-item wow fadeIn" data-wow-delay="0.2s" style="position: relative; padding: 30px; transition: all 0.3s ease;">
+                <div class="service-item wow fadeIn" data-wow-delay="0.2s" style="background-color: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 15px; transition: all 0.3s ease; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); backdrop-filter: blur(10px);">
                     <div class="service-circle">
                         <i class="fa fa-cloud-upload-alt" style="font-size: 50px; color: #fff;"></i>
                     </div>
-                    <h5 class="mt-4 text-black">Cloud Computing</h5>
-                    <p class="text-muted">Scalable, secure, and flexible cloud solutions for all your data and storage needs.</p>
+                    <h5 class="mt-4 text-white">Cloud Computing</h5>
+                    <p class="text-white">Scalable, secure, and flexible cloud solutions for all your data and storage needs.</p>
                 </div>
             </div>
 
             <!-- Service Item 3 -->
             <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-item wow fadeIn" data-wow-delay="0.3s" style="position: relative; padding: 30px; transition: all 0.3s ease;">
+                <div class="service-item wow fadeIn" data-wow-delay="0.3s" style="background-color: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 15px; transition: all 0.3s ease; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); backdrop-filter: blur(10px);">
                     <div class="service-circle">
                         <i class="fa fa-lock" style="font-size: 50px; color: #fff;"></i>
                     </div>
-                    <h5 class="mt-4 text-black">Cybersecurity</h5>
-                    <p class="text-muted">State-of-the-art security systems to protect your data and applications against threats.</p>
+                    <h5 class="mt-4 text-white">Cybersecurity</h5>
+                    <p class="text-white">State-of-the-art security systems to protect your data and applications against threats.</p>
                 </div>
             </div>
 
             <!-- Service Item 4 -->
             <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-item wow fadeIn" data-wow-delay="0.4s" style="position: relative; padding: 30px; transition: all 0.3s ease;">
+                <div class="service-item wow fadeIn" data-wow-delay="0.4s" style="background-color: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 15px; transition: all 0.3s ease; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); backdrop-filter: blur(10px);">
                     <div class="service-circle">
                         <i class="fa fa-robot" style="font-size: 50px; color: #fff;"></i>
                     </div>
-                    <h5 class="mt-4 text-black">Robotics & IoT</h5>
-                    <p class="text-muted">Innovative IoT solutions that integrate seamlessly with advanced robotics technologies.</p>
+                    <h5 class="mt-4 text-white">Robotics & IoT</h5>
+                    <p class="text-white">Innovative IoT solutions that integrate seamlessly with advanced robotics technologies.</p>
                 </div>
             </div>
         </div>
@@ -1320,70 +1322,23 @@
     .text-glow {
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     }
-</style>
-
-<!-- CSS for Animation & Design -->
-<style>
-    body {
-        background: #fef9fde8;
-        font-family: 'Poppins', sans-serif;
+    
+    .wow {
+        visibility: hidden;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
     }
     
-    .service-section {
-        position: relative;
-        padding: 60px 0;
-    }
-    
-    .section-title {
-        font-weight: bold;
-        color: #f4b400;
-        letter-spacing: 2px;
-    }
-    
-    .section-title.text-glow {
-        text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
-    }
-    
-    .text-white {
-        color: white;
-    }
-    
-    .service-grid {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-    
-    .service-card {
-        background-color: #2b2f3a;
-        color: white;
-        padding: 20px;
-        border-radius: 10px;
-        width: 45%;
-        margin-bottom: 20px;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease;
-    }
-    
-    .service-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.3);
-    }
-    
-    .service-content .icon {
-        font-size: 50px;
-        color: #f4b400;
-        margin-bottom: 15px;
-    }
-    
-    .service-content h5 {
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-    
-    .service-content p {
-        font-size: 14px;
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 </style>
 

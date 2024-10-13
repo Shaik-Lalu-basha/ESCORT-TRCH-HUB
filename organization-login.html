@@ -167,25 +167,25 @@
                 <h1 class="text-primary m-0">ESCORT TECH HUB</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
+            <span class="fa fa-bars"></span>
+        </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link ">About</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="package.html" class="nav-item nav-link">Events</a>
+                    <!-- Add "data-page" attribute to each link to track the intended page -->
+                    <a href="#" class="nav-item nav-link" data-page="index.html">Home</a>
+                    <a href="#" class="nav-item nav-link" data-page="about.html">About</a>
+                    <a href="#" class="nav-item nav-link" data-page="service.html">Services</a>
+                    <a href="#" class="nav-item nav-link" data-page="package.html">Events</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blogs</a>
                         <div class="dropdown-menu m-0">
-                            <a href="destination.html" class="dropdown-item">Hackathons</a>
-                            <a href="booking.html" class="dropdown-item">Ideathons</a>
-                            <!-- <a href="team.html" class="dropdown-item">Internships</a>-->
-                            <a href="testimonial.html" class="dropdown-item">Webinars</a>
-                            <a href="404.html" class="dropdown-item">Others</a>
+                            <a href="#" class="dropdown-item" data-page="destination.html">Hackathons</a>
+                            <a href="#" class="dropdown-item" data-page="booking.html">Ideathons</a>
+                            <a href="#" class="dropdown-item" data-page="testimonial.html">Webinars</a>
+                            <a href="#" class="dropdown-item" data-page="404.html">Others</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="#" class="nav-item nav-link" data-page="contact.html">Contact</a>
                 </div>
 
                 <!-- Register/Login Dropdown -->
@@ -194,14 +194,35 @@
                     Register/Login
                 </a>
                     <ul class="dropdown-menu" aria-labelledby="registerDropdown">
-                        <li><a class="dropdown-item" href="admin-login.html">Admin Login/Register</a></li>
+                        <li><a class="dropdown-item" href="admin-login.html">Admin Login</a></li>
+                        <li><a class="dropdown-item" href="organization-login.html">Organization Login</a></li>
                         <li><a class="dropdown-item" href="student-login.html">Student Login/Register</a></li>
-                        <li><a class="dropdown-item" href="organization-login.html">Organization Login/Register</a></li>
+
                     </ul>
                 </div>
             </div>
         </nav>
 
+        <!-- Popup Modal (Bootstrap) -->
+        <div class="modal fade" id="loginRegisterModal" tabindex="-1" aria-labelledby="loginRegisterModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginRegisterModalLabel">Please Register or Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>You need to register or login to access this page.</p>
+                        <p>
+                            <a href="student-login.html" class="btn btn-primary">Login</a>
+                            <a href="student-login.html" class="btn btn-secondary">Register</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Hero Section as needed -->
         <div class="container-fluid bg-primary py-5 mb-5 hero-header">
             <div class="container py-5">
                 <div class="row justify-content-center py-5">
@@ -220,6 +241,26 @@
         </div>
     </div>
     <!-- Navbar & Hero End -->
+
+    <script>
+        // Mock variable to check if the user is logged in
+        let isLoggedIn = false; // You can set this dynamically based on your authentication system
+
+        // Attach click event to nav links
+        document.querySelectorAll('.navbar-nav .nav-link, .dropdown-item').forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                if (!isLoggedIn) {
+                    event.preventDefault(); // Prevent navigation
+                    // Show the modal popup
+                    var myModal = new bootstrap.Modal(document.getElementById('loginRegisterModal'));
+                    myModal.show();
+                } else {
+                    // Redirect to the intended page (if logged in)
+                    window.location.href = event.target.getAttribute('data-page');
+                }
+            });
+        });
+    </script>
 
     <body>
 
